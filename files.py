@@ -1,3 +1,4 @@
+# Here's the hard way, where I figure out what system we're on
 import platform
 
 if platform.system() == 'Windows':
@@ -12,3 +13,12 @@ print('Opened file', filename)
 with open(filename) as f:
     read_data = f.read()
 f.closed
+
+# Now try the easier way, with pathlib
+from pathlib import Path
+print("Home sweet", str(Path.home()))
+filename = Path(str(Path.home())+"/Downloads/transactions.txt")
+print("Full path:", filename)
+print("Full name:", filename.name)
+print("Stem:", filename.stem)
+print("Extension:", filename.suffix)
