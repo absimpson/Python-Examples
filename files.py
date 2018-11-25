@@ -19,6 +19,11 @@ from pathlib import Path
 print("Home sweet", str(Path.home()))
 filename = Path(str(Path.home())+"/Downloads/transactions.txt")
 print("Full path:", filename)
+print("parent\tstem\tsuffix")
+print(str(filename.parent) + "\t" + str(filename.stem) + "\t" + str(filename.suffix))
+print("Dir path:", filename.parent)
 print("Full name:", filename.name)
 print("Stem:", filename.stem)
 print("Extension:", filename.suffix)
+
+print(filename.read_text())
