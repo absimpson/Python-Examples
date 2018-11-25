@@ -5,7 +5,7 @@ if platform.system() == 'Windows':
 elif platform.system() == 'Linux':
     filename = '/mnt/c/Users/asimpson/Downloads/transactions.txt'
 else:
-    exit('I don\'t know who i am', platform.system())
+    exit('I don\'t know who i am: ' +  platform.system())
 
 print('Opened file', filename)
 
